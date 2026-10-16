@@ -4,6 +4,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#f6efe4">
+<script>
+  if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+  window.addEventListener('pageshow', function () {
+    if (!window.location.hash) window.scrollTo(0, 0);
+  });
+</script>
 <meta name="description" content="If You Ever Call, the debut novel by Bhaiya Aware. A story of unanswered questions, dangerous secrets, and truths that refuse to stay hidden.">
 <title>If You Ever Call | Bhaiya Aware</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
