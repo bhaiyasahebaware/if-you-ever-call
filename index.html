@@ -1,50 +1,192 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#f4efe6"><meta name="description" content="If You Ever Call, a novel by Bhaiya Aware. A murder. A confession. A truth that refuses to stay buried.">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#f4efe6">
+<meta name="description" content="If You Ever Call, the debut novel by Bhaiya Aware. A murder. A confession. A truth that refuses to stay buried.">
 <title>If You Ever Call | Bhaiya Aware</title>
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
 <style>
-:root{--paper:#f4efe6;--ink:#252322;--muted:#706862;--red:#b32132;--green:#25824b;--line:#d8cec1;--white:#fffaf3;--serif:'Playfair Display',Georgia,serif;--sans:'DM Sans',Arial,sans-serif}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.6}a{color:inherit}.wrap{width:min(1160px,calc(100% - 44px));margin:auto}.topbar{height:82px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}.wordmark{font:600 17px var(--serif);letter-spacing:.11em;text-decoration:none}.wordmark span{color:var(--red)}.order{display:inline-flex;align-items:center;gap:12px;background:var(--red);color:#fff;text-decoration:none;padding:13px 19px;font-size:12px;font-weight:700;letter-spacing:.1em;border-radius:3px;box-shadow:0 5px 0 #791622;transition:transform .2s,background .2s}.order:hover{transform:translateY(-2px);background:#921a29}.hero{display:grid;grid-template-columns:1.02fr .98fr;gap:clamp(34px,7vw,100px);align-items:center;padding:76px 0 88px;min-height:660px}.eyebrow{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--red);font-weight:700}.hero h1{font:600 clamp(44px,6.2vw,78px)/1.04 var(--serif);letter-spacing:-.04em;margin:20px 0 22px;max-width:600px}.hero h1 em{font-weight:500;color:var(--red)}.hero-copy{max-width:490px;color:#5d5650;font-size:16px}.byline{margin:27px 0 0;font-size:12px;letter-spacing:.16em;text-transform:uppercase;font-weight:700}.puzzle-area{justify-self:center;width:min(100%,405px);text-align:center}.puzzle-frame{position:relative;width:100%;aspect-ratio:5/8;background:#d9cfc2;box-shadow:0 24px 55px #34251d2b;border:8px solid var(--white);overflow:hidden;touch-action:manipulation}.puzzle-grid{position:absolute;inset:0;display:grid;grid-template-columns:repeat(3,1fr);grid-template-rows:repeat(3,1fr);gap:3px;background:#201b1b}.piece{border:0;padding:0;min-width:0;min-height:0;position:relative;background-image:url('assets/front-cover.jpg');background-size:300% 300%;cursor:grab;transition:transform .18s,filter .18s,opacity .2s;outline-offset:-4px}.piece:focus-visible{outline:3px solid #fff}.piece:active{cursor:grabbing}.piece.locked{cursor:default;filter:saturate(1.04);box-shadow:inset 0 0 0 2px #ffffff9c}.piece.selected{z-index:2;transform:scale(.94);outline:3px solid #fff;box-shadow:0 0 0 5px var(--red)}.piece:after{content:'';position:absolute;inset:0;background:linear-gradient(145deg,#ffffff18,transparent 45%,#0000000c);pointer-events:none}.puzzle-hint{font-size:12px;color:var(--muted);margin:16px 0 13px}.progress{height:3px;background:#dfd4c8;width:100%;margin:0 auto 17px;overflow:hidden}.progress span{display:block;height:100%;width:0;background:var(--green);transition:width .3s}.read-btn{border:0;border-radius:3px;padding:16px 26px;width:min(100%,250px);background:var(--red);color:white;font:700 12px var(--sans);letter-spacing:.16em;cursor:not-allowed;opacity:.95;transition:background .25s,transform .2s;box-shadow:0 5px 0 #791622}.read-btn.ready{background:var(--green);box-shadow:0 5px 0 #14552f;cursor:pointer}.read-btn.ready:hover{transform:translateY(-2px)}.section{padding:90px 0;border-top:1px solid var(--line)}.section-head{display:flex;align-items:flex-end;justify-content:space-between;gap:30px;margin-bottom:36px}.section h2{font:600 clamp(34px,4vw,52px)/1.12 var(--serif);letter-spacing:-.03em;margin:12px 0 0}.section-number{font:italic 14px var(--serif);color:var(--red)}.explore-grid{display:grid;grid-template-columns:.7fr 1.3fr;gap:8vw;align-items:start}.pullquote{font:500 clamp(24px,3vw,35px)/1.35 var(--serif);color:var(--red);margin:0}.description{font-size:17px;color:#514a44;max-width:670px}.description p{margin:0 0 18px}.about{background:#292524;color:#f4efe6;padding:86px 0}.about .eyebrow{color:#e17c83}.about-grid{display:grid;grid-template-columns:.7fr 1.3fr;gap:8vw}.about h2{font:600 clamp(35px,4vw,52px)/1.1 var(--serif);margin:12px 0}.about p{color:#d4cbc2;max-width:650px;font-size:16px}.contact{padding:72px 0 42px}.contact-row{display:flex;justify-content:space-between;gap:32px;align-items:center;flex-wrap:wrap}.contact h2{font:600 34px var(--serif);margin:0 0 10px}.contact-links{display:flex;gap:24px;flex-wrap:wrap}.contact-links a{text-decoration:none;border-bottom:1px solid var(--red);padding-bottom:4px;font-weight:600}.contact-links a:hover{color:var(--red)}footer{border-top:1px solid var(--line);padding:20px 0 30px;color:var(--muted);font-size:11px;letter-spacing:.06em;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
-/* reader */.reader{position:fixed;inset:0;z-index:20;background:#1e1c1b;color:#f7f0e6;display:none;flex-direction:column}.reader.open{display:flex}.reader-top,.reader-bottom{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 18px;background:#292625}.reader-title{font:500 15px var(--serif)}.reader button{background:transparent;color:inherit;border:1px solid #77706b;border-radius:3px;padding:9px 12px;cursor:pointer;font:500 12px var(--sans)}.reader button:hover{background:#ffffff18}.reader-tools{display:flex;gap:8px;align-items:center}.reader-stage{flex:1;min-height:0;display:flex;align-items:center;justify-content:center;padding:18px;overflow:hidden;perspective:1800px}.page-shell{height:100%;width:min(100%,560px);max-width:100%;display:flex;align-items:center;justify-content:center;position:relative;transform-style:preserve-3d}.page-shell.turning{animation:turn .42s ease}.page-shell canvas{max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain;box-shadow:0 10px 40px #0008;background:#fff}.reader-bottom{justify-content:center;flex-wrap:wrap}.reader-bottom .status{min-width:100px;text-align:center;font-size:12px;color:#cfc5bb}.reader-bottom input{width:min(30vw,240px);accent-color:#d65a63}.reader-note{font-size:11px;color:#bdb3aa;text-align:center;padding:0 12px 12px}.reader-loading{color:#e8ddd2}.close-reader{font-size:20px!important;line-height:1}.explore-button{display:inline-flex;margin-top:20px;gap:12px;align-items:center;text-decoration:none;border-bottom:1px solid var(--red);padding:8px 0;font-size:12px;letter-spacing:.12em;text-transform:uppercase;font-weight:700}.explore-button span{color:var(--red)}
-@keyframes turn{0%{transform:rotateY(0);opacity:1}45%{transform:rotateY(-12deg);opacity:.75}100%{transform:rotateY(0);opacity:1}}
-@media(max-width:760px){.wrap{width:min(100% - 30px,560px)}.topbar{height:70px}.wordmark{font-size:13px}.order{padding:11px 13px;font-size:10px}.hero{grid-template-columns:1fr;gap:42px;padding:55px 0 68px;min-height:0}.hero h1{font-size:clamp(44px,12vw,66px)}.hero-copy{font-size:15px}.puzzle-area{width:min(100%,340px)}.section{padding:65px 0}.section-head{align-items:flex-start}.explore-grid,.about-grid{grid-template-columns:1fr;gap:26px}.pullquote{max-width:430px}.description{font-size:16px}.about{padding:65px 0}.contact{padding:58px 0 30px}.reader-top{padding:10px}.reader-title{font-size:12px}.reader button{padding:8px}.reader-stage{padding:10px}.reader-bottom{gap:7px;padding:10px}.reader-bottom .status{min-width:80px}.reader-bottom input{width:25vw}}
+:root{--paper:#f4efe6;--ink:#252322;--muted:#706862;--red:#b32132;--green:#25824b;--gold:#a66a36;--line:#d8cec1;--white:#fffaf3;--serif:'Playfair Display',Georgia,serif;--sans:'DM Sans',Arial,sans-serif}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.65}a{color:inherit}.wrap{width:min(1160px,calc(100% - 44px));margin:auto}
+.topbar{min-height:82px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}.wordmark{font:600 17px var(--serif);letter-spacing:.11em;text-decoration:none}.wordmark span{color:var(--red)}.order{display:inline-flex;align-items:center;background:var(--red);color:#fff;text-decoration:none;padding:12px 18px;font-size:11px;font-weight:700;letter-spacing:.1em;border-radius:3px;box-shadow:0 4px 0 #791622;transition:transform .2s}.order:hover{transform:translateY(-2px)}
+.hero{display:grid;grid-template-columns:1fr .85fr;gap:clamp(36px,7vw,100px);align-items:center;padding:76px 0 88px;min-height:620px}.eyebrow{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--red);font-weight:700}.hero h1{font:600 clamp(44px,6.2vw,78px)/1.04 var(--serif);letter-spacing:-.04em;margin:20px 0 22px;max-width:620px}.hero h1 em{font-weight:500;color:var(--red)}.hero-copy{max-width:490px;color:#5d5650;font-size:16px}.byline{margin:27px 0 0;font-size:12px;letter-spacing:.16em;text-transform:uppercase;font-weight:700}.explore-link{display:inline-flex;margin-top:20px;gap:12px;align-items:center;text-decoration:none;border-bottom:1px solid var(--red);padding:8px 0;font-size:12px;letter-spacing:.12em;text-transform:uppercase;font-weight:700}.explore-link span{color:var(--red)}
+.cover-area{justify-self:center;width:min(100%,390px);text-align:center}.cover-frame{background:var(--white);padding:9px;border:1px solid #e5dacf;box-shadow:0 24px 55px #34251d2b}.cover-frame img{display:block;width:100%;height:auto;aspect-ratio:5/8;object-fit:cover}.actions{display:grid;gap:13px;margin-top:27px}.action-btn{display:flex;justify-content:center;align-items:center;min-height:52px;width:100%;border:0;border-radius:3px;padding:15px 20px;color:white;text-decoration:none;font:700 12px var(--sans);letter-spacing:.15em;cursor:pointer;transition:transform .2s,filter .2s}.action-btn:hover{transform:translateY(-2px);filter:brightness(1.06)}.read-btn{background:var(--green);box-shadow:0 5px 0 #14552f}.request-btn{background:var(--gold);box-shadow:0 5px 0 #74451f}.button-note{font-size:11px;color:var(--muted);margin:5px 0 0}
+.section{padding:88px 0;border-top:1px solid var(--line)}.section-head{display:flex;align-items:flex-end;justify-content:space-between;gap:30px;margin-bottom:36px}.section h2{font:600 clamp(34px,4vw,52px)/1.12 var(--serif);letter-spacing:-.03em;margin:12px 0 0}.section-number{font:italic 14px var(--serif);color:var(--red)}.explore-grid{display:grid;grid-template-columns:.7fr 1.3fr;gap:8vw;align-items:start}.pullquote{font:500 clamp(24px,3vw,35px)/1.35 var(--serif);color:var(--red);margin:0}.description{font-size:16px;color:#514a44;max-width:720px}.description p{margin:0 0 18px}.description .story-kicker{font-size:12px;line-height:1.6;letter-spacing:.08em;font-weight:700;color:var(--ink)}
+.about{background:#292524;color:#f4efe6;padding:86px 0}.about .eyebrow{color:#e17c83}.about-grid{display:grid;grid-template-columns:.7fr 1.3fr;gap:8vw}.about h2{font:600 clamp(35px,4vw,52px)/1.1 var(--serif);margin:12px 0}.about p{color:#d4cbc2;max-width:700px;font-size:16px;margin:0 0 17px}
+.contact{padding:72px 0 42px}.contact-row{display:flex;justify-content:space-between;gap:32px;align-items:center;flex-wrap:wrap}.contact h2{font:600 34px var(--serif);margin:0 0 10px}.contact-links{display:flex;gap:24px;flex-wrap:wrap}.contact-links a{text-decoration:none;border-bottom:1px solid var(--red);padding-bottom:4px;font-weight:600}.contact-links a:hover{color:var(--red)}footer{border-top:1px solid var(--line);padding:20px 0 30px;color:var(--muted);font-size:11px;letter-spacing:.06em;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+/* In-page PDF reader */.reader{position:fixed;inset:0;z-index:20;background:#1e1c1b;color:#f7f0e6;display:none;flex-direction:column}.reader.open{display:flex}.reader-top,.reader-bottom{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 18px;background:#292625}.reader-title{font:500 15px var(--serif)}.reader button{background:transparent;color:inherit;border:1px solid #77706b;border-radius:3px;padding:9px 12px;cursor:pointer;font:500 12px var(--sans)}.reader button:hover{background:#ffffff18}.reader-tools{display:flex;gap:8px;align-items:center}.reader-stage{flex:1;min-height:0;display:flex;align-items:center;justify-content:center;padding:18px;overflow:hidden;perspective:1800px}.page-shell{height:100%;width:min(100%,800px);max-width:100%;display:flex;align-items:center;justify-content:center;position:relative}.page-shell canvas{max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain;box-shadow:0 10px 40px #0008;background:#fff}.reader-bottom{justify-content:center;flex-wrap:wrap}.reader-bottom .status{min-width:100px;text-align:center;font-size:12px;color:#cfc5bb}.reader-bottom input{width:min(30vw,240px);accent-color:#d65a63}.reader-note{font-size:11px;color:#bdb3aa;text-align:center;padding:0 12px 12px}.close-reader{font-size:20px!important;line-height:1}
+@media(max-width:760px){.wrap{width:min(100% - 30px,560px)}.topbar{min-height:70px}.wordmark{font-size:13px}.order{padding:11px 13px;font-size:10px}.hero{grid-template-columns:1fr;gap:42px;padding:55px 0 68px;min-height:0}.hero h1{font-size:clamp(44px,12vw,66px)}.hero-copy{font-size:15px}.cover-area{width:min(100%,330px)}.section{padding:65px 0}.section-head{align-items:flex-start}.explore-grid,.about-grid{grid-template-columns:1fr;gap:26px}.pullquote{max-width:430px}.description{font-size:15px}.about{padding:65px 0}.contact{padding:58px 0 30px}.reader-top{padding:10px}.reader-title{font-size:12px}.reader button{padding:8px}.reader-stage{padding:10px}.reader-bottom{gap:7px;padding:10px}.reader-bottom .status{min-width:80px}.reader-bottom input{width:25vw}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
 </style>
 </head>
 <body>
-<header class="wrap topbar"><a class="wordmark" href="#top">BHAIYA <span>AWARE</span></a><a class="order" href="#" id="orderLink" aria-label="Order the book, link coming soon">ORDER NOW <span aria-hidden="true">↗</span></a></header>
+<header class="wrap topbar"><a class="wordmark" href="#top">BHAIYA <span>AWARE</span></a><a class="order" href="#" id="orderLink" aria-label="Order the book, link coming soon">ORDER NOW</a></header>
 <main id="top" class="wrap">
-<section class="hero" aria-labelledby="hero-title"><div><div class="eyebrow">A novel by Bhaiya Aware</div><h1 id="hero-title">Some truths refuse to stay <em>buried.</em></h1><p class="hero-copy">A murder. A confession. A truth that refuses to stay buried. Somewhere between unanswered questions and dangerous secrets, a young lawyer finds himself chasing a truth that could change everything.</p><p class="byline">If You Ever Call · A Novel</p><a class="explore-button" href="#explore">Explore the book <span>↓</span></a></div>
-<div class="puzzle-area"><div class="puzzle-frame" aria-label="Arrange the nine pieces to reveal the book cover"><div class="puzzle-grid" id="puzzleGrid"></div></div><p class="puzzle-hint" id="puzzleHint" aria-live="polite">A little patience reveals the whole story. Select two pieces to swap them.</p><div class="progress" aria-hidden="true"><span id="progressBar"></span></div><button class="read-btn" id="readBtn" disabled>READ NOW</button></div></section>
-<section class="section" id="explore"><div class="section-head"><div><div class="eyebrow">Between the questions and the truth</div><h2>Explore the book</h2></div><span class="section-number">01 / THE STORY</span></div><div class="explore-grid"><blockquote class="pullquote">“As if life itself is saying, if you ever call, I’ll answer.”</blockquote><div class="description"><p><strong>A MURDER. A CONFESSION. A TRUTH THAT REFUSES TO STAY BURIED.</strong></p><p>Somewhere between unanswered questions and dangerous secrets, a young lawyer finds himself chasing a truth that could change everything.</p><p>As if life itself is saying, <em>If you ever call, I’ll answer.</em></p></div></div></section>
+<section class="hero" aria-labelledby="hero-title">
+  <div>
+    <div class="eyebrow">A debut novel by Bhaiya Aware</div>
+    <h1 id="hero-title">Some truths refuse to stay <em>buried.</em></h1>
+    <p class="hero-copy">A murder. A confession. A truth that refuses to stay buried. Somewhere between unanswered questions and dangerous secrets, a young lawyer finds himself chasing a truth that could change everything.</p>
+    <p class="byline">If You Ever Call · A Novel</p>
+    <a class="explore-link" href="#explore">Explore the book <span>↓</span></a>
+  </div>
+  <div class="cover-area">
+    <div class="cover-frame"><img src="assets/front-cover.jpg" alt="Book cover of If You Ever Call by Bhaiya Aware"></div>
+    <div class="actions">
+      <button class="action-btn read-btn" id="readBtn" type="button">READ NOW</button>
+      <a class="action-btn request-btn" href="mailto:bhaiyasahebaware@gmail.com?subject=PDF%20Request%3A%20If%20You%20Ever%20Call&amp;body=Hello%20Bhaiya%2C%0A%0AI%20would%20like%20to%20request%20a%20PDF%20copy%20of%20your%20novel%2C%20If%20You%20Ever%20Call.%0A%0AThank%20you!" id="requestPdf">REQUEST A PDF</a>
+    </div>
+    <p class="button-note">Read online or request a copy by email.</p>
+  </div>
+</section>
+<section class="section" id="explore">
+  <div class="section-head"><div><div class="eyebrow">Between the questions and the truth</div><h2>Explore the book</h2></div><span class="section-number">01 / THE STORY</span></div>
+  <div class="explore-grid">
+    <blockquote class="pullquote">Some secrets refuse to stay hidden.</blockquote>
+    <div class="description">
+      <p class="story-kicker">A MURDER. A CONFESSION. A TRUTH THAT REFUSES TO STAY BURIED.</p>
+      <p>Some questions are better left unanswered. Some secrets refuse to stay hidden.</p>
+      <p>When a young lawyer finds himself caught in a web of unanswered questions and dangerous secrets, the search for truth becomes more than a pursuit of justice. It becomes a journey into the shadows of human nature, where every revelation raises another question, every confession hides something more, and the truth may be far more unsettling than the crime itself.</p>
+      <p>As the pieces begin to fall into place, one question remains: how far would you go to uncover a truth that could change everything?</p>
+      <p>Because sometimes, all it takes is one call.</p>
+      <p>And if you ever call, will someone still answer?</p>
+    </div>
+  </div>
+</section>
 </main>
-<section class="about" id="about"><div class="wrap about-grid"><div><div class="eyebrow">The person behind the pages</div><h2>About the Author</h2></div><div><p>Bhaiya Aware is a writer who believes some stories stay with us long after the final page. <em>If You Ever Call</em> is his novel.</p></div></div></section>
-<section class="contact wrap" id="contact"><div class="contact-row"><div><div class="eyebrow">Letters are always welcome</div><h2>Get in touch.</h2><p style="color:var(--muted);margin:0">For messages, thoughts, or a conversation about the book.</p></div><div class="contact-links"><a href="mailto:bhaiyasahebaware@gmail.com">Email me ↗</a><a href="https://www.instagram.com/bhaiyaone/" target="_blank" rel="noopener noreferrer">Instagram @bhaiyaone ↗</a></div></div></section>
+<section class="about" id="about">
+  <div class="wrap about-grid">
+    <div><div class="eyebrow">The person behind the pages</div><h2>About the Author</h2></div>
+    <div>
+      <p><em>If You Ever Call</em> marks Bhaiya Aware’s debut as a novelist, introducing a storyteller drawn to the uneasy spaces between truth, memory, and the secrets people keep.</p>
+      <p>With a fascination for human nature and the choices that shape us, he writes stories where every answer opens another door and the truth is rarely as simple as it first appears. In his debut novel, suspense and intimate questions of trust and justice come together in a story that asks what we are willing to uncover, and what we might wish had stayed hidden.</p>
+      <p>For Bhaiya, a story does not end at the final page. It stays with you, quietly asking its questions long after you have closed the book.</p>
+    </div>
+  </div>
+</section>
+<section class="contact wrap" id="contact">
+  <div class="contact-row">
+    <div><div class="eyebrow">Letters are always welcome</div><h2>Get in touch.</h2><p style="color:var(--muted);margin:0">For messages, thoughts, or a conversation about the book.</p></div>
+    <div class="contact-links"><a href="mailto:bhaiyasahebaware@gmail.com">Email me ↗</a><a href="https://www.instagram.com/bhaiyaone/" target="_blank" rel="noopener noreferrer">Instagram @bhaiyaone ↗</a></div>
+  </div>
+</section>
 <footer class="wrap"><span>© <span id="year"></span> Bhaiya Aware</span><span>IF YOU EVER CALL · A NOVEL</span></footer>
-<div class="reader" id="reader" role="dialog" aria-modal="true" aria-label="Read If You Ever Call"><div class="reader-top"><span class="reader-title">IF YOU EVER CALL <span style="color:#d46a72">·</span> BHAIYA AWARE</span><div class="reader-tools"><button id="zoomOut" aria-label="Zoom out">−</button><button id="zoomIn" aria-label="Zoom in">＋</button><button class="close-reader" id="closeReader" aria-label="Close reader">×</button></div></div><div class="reader-stage"><div class="page-shell" id="pageShell"><canvas id="pdfCanvas" aria-label="Book page"></canvas></div></div><div class="reader-bottom"><button id="prevPage">← Previous</button><span class="status" id="pageStatus">Loading book…</span><input id="pageSlider" type="range" min="1" max="267" value="1" aria-label="Choose page"><button id="nextPage">Next →</button></div><div class="reader-note">Use the arrows or your keyboard to turn pages. Your reading copy opens in this browser.</div></div>
+
+<div class="reader" id="reader" role="dialog" aria-modal="true" aria-label="Read If You Ever Call">
+  <div class="reader-top">
+    <span class="reader-title">IF YOU EVER CALL <span style="color:#d46a72">·</span> BHAIYA AWARE</span>
+    <div class="reader-tools"><button id="zoomOut" aria-label="Zoom out">−</button><button id="zoomIn" aria-label="Zoom in">＋</button><button class="close-reader" id="closeReader" aria-label="Close reader">×</button></div>
+  </div>
+  <div class="reader-stage"><div class="page-shell"><canvas id="pdfCanvas" aria-label="Book page"></canvas></div></div>
+  <div class="reader-bottom"><button id="prevPage">← Previous</button><span class="status" id="pageStatus">Loading book…</span><input id="pageSlider" type="range" min="1" max="1" value="1" aria-label="Choose page"><button id="nextPage">Next →</button></div>
+  <div class="reader-note">Use the arrows or keyboard to turn pages. Press Esc to close.</div>
+</div>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
 <script>
-(()=>{'use strict';
-const grid=document.getElementById('puzzleGrid'),hint=document.getElementById('puzzleHint'),bar=document.getElementById('progressBar'),readBtn=document.getElementById('readBtn');
-let pieces=[],selected=null,solved=0;
-function shuffle(a){for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}if(a.every((v,i)=>v===i)) [a[0],a[1]]=[a[1],a[0]];return a}
-function setPosition(el,pos){el.style.backgroundPosition=`${(pos%3)*50}% ${Math.floor(pos/3)*50}%`}
-function renderPuzzle(){grid.innerHTML='';pieces=[];selected=null;solved=0;const order=shuffle([0,1,2,3,4,5,6,7,8]);order.forEach((correct,index)=>{const b=document.createElement('button');b.type='button';b.className='piece';b.setAttribute('aria-label',`Cover piece ${index+1}`);b.dataset.correct=String(correct);setPosition(b,correct);b.addEventListener('click',()=>choose(b));grid.appendChild(b);pieces.push(b)});updateProgress()}
-function choose(piece){if(piece.classList.contains('locked'))return;if(!selected){selected=piece;piece.classList.add('selected');hint.textContent='Now select the piece you want to swap with this one.';return}if(selected===piece){piece.classList.remove('selected');selected=null;hint.textContent='Select two pieces to swap them.';return}const a=selected,b=piece,ap=a.dataset.correct,bp=b.dataset.correct;setPosition(a,Number(bp));setPosition(b,Number(ap));a.dataset.correct=bp;b.dataset.correct=ap;a.classList.remove('selected');selected=null;[a,b].forEach(p=>{if(Number(p.dataset.correct)===pieces.indexOf(p)){p.classList.add('locked');p.disabled=true;p.setAttribute('aria-label','Correctly placed cover piece')}});solved=pieces.filter(p=>p.classList.contains('locked')).length;updateProgress()}
-function updateProgress(){bar.style.width=`${solved/9*100}%`;if(solved===9){hint.textContent='The cover is complete. The story is yours to open.';readBtn.disabled=false;readBtn.classList.add('ready');readBtn.setAttribute('aria-label','Read the book');}else{hint.textContent=`${solved} of 9 pieces in place · Select two pieces to swap.`;readBtn.disabled=true;readBtn.classList.remove('ready')}}
-renderPuzzle();document.getElementById('year').textContent=new Date().getFullYear();
-// Purchase link intentionally awaits the live Pothi listing.
-document.getElementById('orderLink').addEventListener('click',e=>{e.preventDefault();hint.textContent='The Pothi order link will be added as soon as the book listing is live.';document.querySelector('.puzzle-area').scrollIntoView({behavior:'smooth',block:'center'})});
-const reader=document.getElementById('reader'),canvas=document.getElementById('pdfCanvas'),ctx=canvas.getContext('2d'),shell=document.getElementById('pageShell'),status=document.getElementById('pageStatus'),slider=document.getElementById('pageSlider');let pdf=null,pageNum=1,scale=1.15,renderTask=null,renderToken=0;
-if(window.pdfjsLib)pdfjsLib.GlobalWorkerOptions.workerSrc='https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
-async function renderPage(n,animate=true){if(!pdf)return;pageNum=Math.max(1,Math.min(pdf.numPages,n));slider.max=pdf.numPages;slider.value=pageNum;status.textContent=`Page ${pageNum} of ${pdf.numPages}`;const token=++renderToken;if(renderTask){try{renderTask.cancel()}catch(e){}}const page=await pdf.getPage(pageNum);if(token!==renderToken)return;const stage=document.querySelector('.reader-stage');const base=page.getViewport({scale:1});const availableW=Math.max(220,stage.clientWidth-28),availableH=Math.max(260,stage.clientHeight-28);const fit=Math.min(availableW/base.width,availableH/base.height)*scale;const viewport=page.getViewport({scale:fit});canvas.width=Math.floor(viewport.width*devicePixelRatio);canvas.height=Math.floor(viewport.height*devicePixelRatio);canvas.style.width=`${viewport.width}px`;canvas.style.height=`${viewport.height}px`;const transform=devicePixelRatio!==1?[devicePixelRatio,0,0,devicePixelRatio,0,0]:null;if(animate){shell.classList.remove('turning');void shell.offsetWidth;shell.classList.add('turning')}renderTask=page.render({canvasContext:ctx,viewport,transform});try{await renderTask.promise}catch(e){if(e.name!=='RenderingCancelledException')console.error(e)}if(token===renderToken)renderTask=null}
-async function openReader(){reader.classList.add('open');document.body.style.overflow='hidden';if(!pdf){status.textContent='Opening book…';try{pdf=await pdfjsLib.getDocument({url:'assets/book.pdf'}).promise;slider.max=pdf.numPages;await renderPage(1,false)}catch(err){status.textContent='Could not load the book. Please refresh and try again.';console.error(err)}}else renderPage(pageNum,false);document.getElementById('closeReader').focus()}
-function closeReader(){reader.classList.remove('open');document.body.style.overflow='';readBtn.focus()}
-readBtn.addEventListener('click',()=>{if(!readBtn.disabled)openReader()});document.getElementById('closeReader').addEventListener('click',closeReader);document.getElementById('prevPage').addEventListener('click',()=>renderPage(pageNum-1));document.getElementById('nextPage').addEventListener('click',()=>renderPage(pageNum+1));slider.addEventListener('input',()=>renderPage(Number(slider.value),false));document.getElementById('zoomIn').addEventListener('click',()=>{scale=Math.min(1.8,scale+.15);renderPage(pageNum,false)});document.getElementById('zoomOut').addEventListener('click',()=>{scale=Math.max(.7,scale-.15);renderPage(pageNum,false)});document.addEventListener('keydown',e=>{if(!reader.classList.contains('open'))return;if(e.key==='Escape')closeReader();if(e.key==='ArrowRight')renderPage(pageNum+1);if(e.key==='ArrowLeft')renderPage(pageNum-1)});window.addEventListener('resize',()=>{if(reader.classList.contains('open')&&pdf)renderPage(pageNum,false)});
+(() => {
+  const $ = id => document.getElementById(id);
+  $('year').textContent = new Date().getFullYear();
+  const orderLink = $('orderLink');
+  orderLink.addEventListener('click', event => { event.preventDefault(); });
+  const reader = $('reader'), canvas = $('pdfCanvas'), ctx = canvas.getContext('2d');
+  const status = $('pageStatus'), slider = $('pageSlider');
+  let pdfDoc = null, pageNum = 1, scale = 1, rendering = false, pendingPage = null, loadingTask = null;
+
+  if (window.pdfjsLib) {
+    pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
+  }
+
+  async function loadPdf() {
+    if (!window.pdfjsLib) {
+      status.textContent = 'Reader library failed to load.';
+      return;
+    }
+    try {
+      loadingTask = pdfjsLib.getDocument('assets/book.pdf');
+      pdfDoc = await loadingTask.promise;
+      slider.max = pdfDoc.numPages;
+      pageNum = 1;
+      await renderPage(pageNum);
+    } catch (error) {
+      console.error(error);
+      status.textContent = 'Could not load the book PDF.';
+    }
+  }
+
+  async function renderPage(num) {
+    if (!pdfDoc) return;
+    if (rendering) { pendingPage = num; return; }
+    rendering = true;
+    try {
+      const page = await pdfDoc.getPage(num);
+      const stage = document.querySelector('.reader-stage');
+      const base = page.getViewport({scale: 1});
+      const availableWidth = Math.max(220, stage.clientWidth - 36);
+      const availableHeight = Math.max(260, stage.clientHeight - 24);
+      const fit = Math.min(availableWidth / base.width, availableHeight / base.height);
+      const viewport = page.getViewport({scale: fit * scale});
+      const outputScale = window.devicePixelRatio || 1;
+      canvas.width = Math.floor(viewport.width * outputScale);
+      canvas.height = Math.floor(viewport.height * outputScale);
+      canvas.style.width = Math.floor(viewport.width) + 'px';
+      canvas.style.height = Math.floor(viewport.height) + 'px';
+      ctx.setTransform(outputScale, 0, 0, outputScale, 0, 0);
+      await page.render({canvasContext: ctx, viewport}).promise;
+      pageNum = num;
+      slider.value = String(num);
+      status.textContent = `Page ${num} of ${pdfDoc.numPages}`;
+      $('prevPage').disabled = num <= 1;
+      $('nextPage').disabled = num >= pdfDoc.numPages;
+    } catch (error) {
+      console.error(error);
+      status.textContent = 'Could not render this page.';
+    } finally {
+      rendering = false;
+      if (pendingPage !== null) {
+        const next = pendingPage;
+        pendingPage = null;
+        renderPage(next);
+      }
+    }
+  }
+
+  function changePage(delta) {
+    if (!pdfDoc) return;
+    const next = Math.max(1, Math.min(pdfDoc.numPages, pageNum + delta));
+    if (next !== pageNum) renderPage(next);
+  }
+  function openReader() {
+    reader.classList.add('open');
+    document.body.style.overflow = 'hidden';
+    if (!pdfDoc && !loadingTask) loadPdf();
+    else if (pdfDoc) renderPage(pageNum);
+    $('closeReader').focus();
+  }
+  function closeReader() {
+    reader.classList.remove('open');
+    document.body.style.overflow = '';
+    $('readBtn').focus();
+  }
+  $('readBtn').addEventListener('click', openReader);
+  $('closeReader').addEventListener('click', closeReader);
+  $('prevPage').addEventListener('click', () => changePage(-1));
+  $('nextPage').addEventListener('click', () => changePage(1));
+  slider.addEventListener('input', () => renderPage(Number(slider.value)));
+  $('zoomIn').addEventListener('click', () => { scale = Math.min(2.5, scale + .15); renderPage(pageNum); });
+  $('zoomOut').addEventListener('click', () => { scale = Math.max(.65, scale - .15); renderPage(pageNum); });
+  document.addEventListener('keydown', event => {
+    if (!reader.classList.contains('open')) return;
+    if (event.key === 'Escape') closeReader();
+    if (event.key === 'ArrowRight') changePage(1);
+    if (event.key === 'ArrowLeft') changePage(-1);
+  });
+  window.addEventListener('resize', () => { if (reader.classList.contains('open') && pdfDoc) renderPage(pageNum); });
 })();
 </script>
-</body></html>
-
+</body>
+</html>
