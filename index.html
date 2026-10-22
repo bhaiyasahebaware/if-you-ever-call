@@ -30,7 +30,7 @@
 </style>
 </head>
 <body>
-<header class="wrap topbar"><a class="wordmark" href="#top">BHAIYA <span>AWARE</span></a><a class="order" href="#" id="orderLink" aria-label="Order the book, link coming soon">ORDER NOW</a></header>
+<header class="wrap topbar"><a class="wordmark" href="#top">BHAIYA <span>AWARE</span></a><a class="order" href="https://store.pothi.com/book/bhaiyasaheb-ashok-aware-if-you-ever-call/" id="orderLink" target="_blank" rel="noopener noreferrer" aria-label="Order If You Ever Call on Pothi, opens in a new tab">ORDER NOW</a></header>
 <main id="top" class="wrap">
 <section class="hero" aria-labelledby="hero-title">
   <div>
@@ -92,9 +92,7 @@
 (() => {
   const $ = id => document.getElementById(id);
   $('year').textContent = new Date().getFullYear();
-  const orderLink = $('orderLink');
-  orderLink.addEventListener('click', event => { event.preventDefault(); });
-  const reader = $('reader'), canvas = $('pdfCanvas'), ctx = canvas.getContext('2d');
+const reader = $('reader'), canvas = $('pdfCanvas'), ctx = canvas.getContext('2d');
   const status = $('pageStatus'), slider = $('pageSlider');
   let pdfDoc = null, pageNum = 1, scale = 1, rendering = false, pendingPage = null, loadingTask = null, flipDirection = 'next';
 
