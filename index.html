@@ -44,12 +44,12 @@
 .contact{padding:66px 0 58px;background:#e8c4b8;box-shadow:0 0 0 100vmax #e8c4b8;clip-path:inset(0 -100vmax);color:#342528}.contact .eyebrow{color:#783640}.contact-row{display:flex;justify-content:space-between;gap:32px;align-items:center;flex-wrap:wrap}.contact h2{font:600 clamp(32px,3.5vw,42px)/1.15 var(--serif);margin:0 0 10px;color:#342528}.contact-links{display:flex;gap:18px;flex-wrap:wrap}.contact-links a{text-decoration:none;border:1px solid #a76b6a;border-radius:4px;padding:11px 15px;font-weight:700;color:#342528;transition:background .2s,color .2s,transform .2s}.contact-links a:hover{background:#352528;color:#fff7ef;transform:translateY(-2px)}footer{border-top:1px solid #5c4143;padding:22px 0 30px;color:#e7d7cf;background:#352528;box-shadow:0 0 0 100vmax #352528;clip-path:inset(0 -100vmax);font-size:11px;letter-spacing:.06em;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 /* In-page PDF reader */.reader{position:fixed;inset:0;z-index:20;background:#f6efe4;color:#292322;display:none;flex-direction:column}.reader.open{display:flex}.reader-top,.reader-bottom{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 18px;background:#eee0d1;border-bottom:1px solid #d8c8bd}.reader-title{font:500 15px var(--serif)}.reader button{background:transparent;color:inherit;border:1px solid #bda69a;border-radius:3px;padding:9px 12px;cursor:pointer;font:500 12px var(--sans)}.reader button:hover{background:#9e1f2d12;border-color:var(--red)}.reader-tools{display:flex;gap:8px;align-items:center}.reader-stage{flex:1;min-height:0;display:flex;align-items:center;justify-content:center;padding:18px;overflow:hidden;perspective:1800px}.page-shell{height:100%;width:min(100%,800px);max-width:100%;display:flex;align-items:center;justify-content:center;position:relative;perspective:1800px}.page-shell canvas{max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain;box-shadow:0 10px 40px #0008;background:#fff;backface-visibility:hidden}
 .page-shell{isolation:isolate}
-.page-shell .page-turn-sheet{position:absolute;z-index:3;max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain;pointer-events:none;backface-visibility:hidden;will-change:transform,filter;box-shadow:0 10px 35px #0005}
-.page-shell .page-turn-sheet.turn-next{transform-origin:left center;animation:premiumTurnNext 1.35s cubic-bezier(.22,.72,.15,1) forwards}
-.page-shell .page-turn-sheet.turn-prev{transform-origin:right center;animation:premiumTurnPrev 1.35s cubic-bezier(.22,.72,.15,1) forwards}
+.page-shell .page-turn-sheet{position:absolute;z-index:3;max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain;pointer-events:none;backface-visibility:hidden;transform-style:preserve-3d;will-change:transform,filter;box-shadow:0 10px 35px #0005}
+.page-shell .page-turn-sheet.turn-next{transform-origin:left center;animation:premiumTurnNext 1.8s cubic-bezier(.24,.62,.22,1) forwards}
+.page-shell .page-turn-sheet.turn-prev{transform-origin:right center;animation:premiumTurnPrev 1.8s cubic-bezier(.24,.62,.22,1) forwards}
 .page-shell .page-turn-sheet.follow-finger{animation:none!important;transition:none!important;z-index:5;transform-style:preserve-3d}
-@keyframes premiumTurnNext{0%{transform:perspective(1800px) rotateY(0deg);filter:brightness(1)}18%{filter:brightness(.94);box-shadow:8px 4px 20px #0003}48%{filter:brightness(.78);box-shadow:18px 8px 30px #0005}70%{filter:brightness(.88)}100%{transform:perspective(1800px) rotateY(-180deg);filter:brightness(.92);box-shadow:0 5px 18px #0002}}
-@keyframes premiumTurnPrev{0%{transform:perspective(1800px) rotateY(0deg);filter:brightness(1)}18%{filter:brightness(.94);box-shadow:-8px 4px 20px #0003}48%{filter:brightness(.78);box-shadow:-18px 8px 30px #0005}70%{filter:brightness(.88)}100%{transform:perspective(1800px) rotateY(180deg);filter:brightness(.92);box-shadow:0 5px 18px #0002}}
+@keyframes premiumTurnNext{0%{transform:perspective(2200px) rotateY(0deg);filter:brightness(1)}35%{filter:brightness(.86);box-shadow:14px 4px 28px #0005}65%{filter:brightness(.78);box-shadow:24px 5px 36px #0007}100%{transform:perspective(2200px) rotateY(-180deg);filter:brightness(.9);box-shadow:0 5px 18px #0002}}
+@keyframes premiumTurnPrev{0%{transform:perspective(2200px) rotateY(0deg);filter:brightness(1)}35%{filter:brightness(.86);box-shadow:-14px 4px 28px #0005}65%{filter:brightness(.78);box-shadow:-24px 5px 36px #0007}100%{transform:perspective(2200px) rotateY(180deg);filter:brightness(.9);box-shadow:0 5px 18px #0002}}
 .reader-stage{touch-action:pan-y}
 @media(prefers-reduced-motion:reduce){.page-shell .page-turn-sheet:not(.follow-finger){animation-duration:.01ms!important}}.reader-bottom{justify-content:center;flex-wrap:wrap}.reader-bottom .status{min-width:100px;text-align:center;font-size:12px;color:#766964}.reader-bottom input{width:min(30vw,240px);accent-color:var(--red)}.reader-note{font-size:11px;color:#766964;text-align:center;padding:0 12px 12px}.close-reader{font-size:20px!important;line-height:1}
 @media(max-width:760px){.wrap{width:min(100% - 30px,560px)}.topbar{min-height:70px}.wordmark{font-size:13px}.order{padding:12px 16px;font-size:10.5px}.hero{grid-template-columns:1fr;gap:42px;padding:55px 0 68px;min-height:0}.hero h1{font-size:clamp(44px,12vw,66px)}.hero-copy{font-size:15px}.cover-area{width:min(100%,330px)}.section{padding:62px 0 68px}.section-head{align-items:flex-start;gap:16px;flex-direction:column;margin-bottom:30px}.explore-grid,.about-grid{grid-template-columns:1fr;gap:26px}.pullquote{max-width:430px}.description{font-size:15px}.description p:last-child{font-size:18px}.about{padding:62px 0}.about p{font-size:16px}.contact{padding:52px 0 48px}.contact-links{gap:12px}.contact-links a{font-size:14px}.reader-top{padding:10px}.reader-title{font-size:12px}.reader button{padding:8px}.reader-stage{padding:10px}.reader-bottom{gap:7px;padding:10px}.reader-bottom .status{min-width:80px}.reader-bottom input{width:25vw}}
@@ -141,19 +141,34 @@ const reader = $('reader'), canvas = $('pdfCanvas'), ctx = canvas.getContext('2d
   }
 
   async function loadPdf() {
+    if (pdfDoc) return pdfDoc;
+    if (loadingTask) return loadingTask.promise;
     if (!window.pdfjsLib) {
       status.textContent = 'Reader library failed to load.';
-      return;
+      return null;
     }
     try {
-      loadingTask = pdfjsLib.getDocument('assets/book.pdf');
+      status.textContent = 'Preparing book…';
+      loadingTask = pdfjsLib.getDocument({ url: 'assets/book.pdf', useSystemFonts: true });
+      loadingTask.onProgress = progress => {
+        if (reader.classList.contains('open') && progress.total > 0) {
+          const percent = Math.round(progress.loaded / progress.total * 100);
+          status.textContent = percent < 100 ? `Loading book… ${percent}%` : 'Opening book…';
+        }
+      };
       pdfDoc = await loadingTask.promise;
       slider.max = pdfDoc.numPages;
       pageNum = 1;
-      await renderPage(pageNum);
+      loadingTask = null;
+      // Load the document in the background, but render only once the reader is visible.
+      if (reader.classList.contains('open')) await renderPage(pageNum);
+      return pdfDoc;
     } catch (error) {
       console.error(error);
-      status.textContent = 'Could not load the book PDF.';
+      loadingTask = null;
+      pdfDoc = null;
+      status.textContent = 'Could not load the book PDF. Please try again.';
+      return null;
     }
   }
 
@@ -262,7 +277,15 @@ const reader = $('reader'), canvas = $('pdfCanvas'), ctx = canvas.getContext('2d
     pdfRequestForm.reset();
   });
 
-  $('readBtn').addEventListener('click', openReader);
+  const readButton = $('readBtn');
+  // Begin loading the PDF as soon as this page's script runs, not only after reader intent.
+  // The document loads in the background; the first page is still rendered only when opened.
+  const warmReader = () => { if (!pdfDoc && !loadingTask) loadPdf(); };
+  warmReader();
+  readButton.addEventListener('pointerenter', warmReader, { once: true });
+  readButton.addEventListener('focus', warmReader, { once: true });
+  readButton.addEventListener('touchstart', warmReader, { once: true, passive: true });
+  readButton.addEventListener('click', openReader);
   $('closeReader').addEventListener('click', closeReader);
   $('prevPage').addEventListener('click', () => changePage(-1));
   $('nextPage').addEventListener('click', () => changePage(1));
@@ -271,73 +294,78 @@ const reader = $('reader'), canvas = $('pdfCanvas'), ctx = canvas.getContext('2d
   $('zoomOut').addEventListener('click', () => { scale = Math.max(.65, scale - .15); canvas.classList.remove('flip-next','flip-prev'); renderPage(pageNum); });
   const readerStage = document.querySelector('.reader-stage');
   const pageShell = document.querySelector('.page-shell');
-  readerStage.addEventListener('touchstart', event => {
-    if (event.touches.length !== 1 || !pdfDoc || !canvas.width || dragTurn) return;
-    const touch = event.touches[0];
+  // Pointer-driven page curl: the sheet tracks the pointer continuously and settles slowly on release.
+  readerStage.addEventListener('pointerdown', event => {
+    if (!pdfDoc || !canvas.width || dragTurn || event.button > 0) return;
     const rect = canvas.getBoundingClientRect();
-    if (touch.clientX < rect.left || touch.clientX > rect.right || touch.clientY < rect.top || touch.clientY > rect.bottom) return;
+    if (event.clientX < rect.left || event.clientX > rect.right || event.clientY < rect.top || event.clientY > rect.bottom) return;
     const sheet = document.createElement('canvas');
     sheet.className = 'page-turn-sheet follow-finger';
     sheet.width = canvas.width;
     sheet.height = canvas.height;
     sheet.style.width = canvas.style.width;
     sheet.style.height = canvas.style.height;
-    sheet.style.transform = 'perspective(1800px) rotateY(0deg)';
+    sheet.style.transform = 'perspective(2200px) rotateY(0deg)';
     sheet.getContext('2d').drawImage(canvas, 0, 0);
     pageShell.querySelectorAll('.page-turn-sheet').forEach(node => node.remove());
     pageShell.appendChild(sheet);
-    dragTurn = {startX:touch.clientX, startY:touch.clientY, startPage:pageNum, direction:0, sheet, width:Math.max(1, rect.width), moved:false, targetStarted:false};
-  }, {passive:true});
+    dragTurn = {pointerId:event.pointerId,startX:event.clientX,startY:event.clientY,startPage:pageNum,direction:0,sheet,width:Math.max(1,rect.width),moved:false,targetStarted:false,lastX:event.clientX};
+    try { readerStage.setPointerCapture(event.pointerId); } catch (_) {}
+  });
 
-  readerStage.addEventListener('touchmove', event => {
-    if (!dragTurn || event.touches.length !== 1) return;
-    const touch = event.touches[0];
-    const dx = touch.clientX - dragTurn.startX;
-    const dy = touch.clientY - dragTurn.startY;
-    if (!dragTurn.direction && Math.abs(dx) > 7 && Math.abs(dx) > Math.abs(dy) * 1.15) {
-      dragTurn.direction = dx < 0 ? 1 : -1;
-      const target = dragTurn.startPage + dragTurn.direction;
-      if (target < 1 || target > pdfDoc.numPages) { dragTurn.direction = 0; return; }
-      dragTurn.targetStarted = true;
-      flipDirection = dragTurn.direction > 0 ? 'next' : 'prev';
+  readerStage.addEventListener('pointermove', event => {
+    const state = dragTurn;
+    if (!state || event.pointerId !== state.pointerId) return;
+    const dx = event.clientX - state.startX;
+    const dy = event.clientY - state.startY;
+    if (!state.direction && Math.abs(dx) > 5 && Math.abs(dx) > Math.abs(dy) * 1.12) {
+      state.direction = dx < 0 ? 1 : -1;
+      const target = state.startPage + state.direction;
+      if (target < 1 || target > pdfDoc.numPages) { state.direction = 0; return; }
+      state.targetStarted = true;
+      flipDirection = state.direction > 0 ? 'next' : 'prev';
       animateTurn = false;
       renderPage(target);
     }
-    if (!dragTurn.direction) return;
-    event.preventDefault();
-    dragTurn.moved = true;
-    const signed = dragTurn.direction > 0 ? -dx : dx;
-    const progress = Math.max(0, Math.min(1, signed / dragTurn.width));
-    const angle = (dragTurn.direction > 0 ? -1 : 1) * progress * 165;
-    dragTurn.sheet.style.transform = `perspective(1800px) rotateY(${angle}deg)`;
-    dragTurn.sheet.style.filter = `brightness(${1 - progress * .24})`;
-    dragTurn.sheet.style.boxShadow = `${dragTurn.direction > 0 ? 1 : -1} ${Math.round(progress*18)}px ${Math.round(progress*28)}px #000${Math.round(20+progress*35).toString(16)}`;
-  }, {passive:false});
+    if (!state.direction) return;
+    if (event.cancelable) event.preventDefault();
+    state.moved = true;
+    state.lastX = event.clientX;
+    const progress = Math.max(0, Math.min(1, Math.abs(dx) / state.width));
+    // A slight nonlinear curve makes the sheet feel weighty rather than mechanically linear.
+    const eased = Math.sin(progress * Math.PI / 2);
+    const angle = (state.direction > 0 ? -1 : 1) * eased * 172;
+    const lift = Math.sin(progress * Math.PI) * 9;
+    state.sheet.style.transform = `perspective(2200px) translateY(${-lift}px) rotateY(${angle}deg)`;
+    state.sheet.style.filter = `brightness(${1 - progress * .26})`;
+    const shadow = Math.round(5 + progress * 28);
+    state.sheet.style.boxShadow = `${state.direction > 0 ? 1 : -1} ${Math.round(progress * 4)}px ${shadow}px rgba(0,0,0,${.18 + progress * .32})`;
+  });
 
   function finishFingerTurn(event) {
-    if (!dragTurn) return;
     const state = dragTurn;
-    const touch = event.changedTouches && event.changedTouches[0];
-    const dx = touch ? touch.clientX - state.startX : 0;
+    if (!state || (event && event.pointerId !== undefined && event.pointerId !== state.pointerId)) return;
+    const dx = state.lastX - state.startX;
     const progress = Math.min(1, Math.abs(dx) / state.width);
-    const commit = state.direction !== 0 && progress > .22;
+    const commit = state.direction !== 0 && progress > .28;
     dragTurn = null;
-    state.sheet.style.transition = 'transform 520ms cubic-bezier(.2,.75,.2,1), filter 520ms ease, box-shadow 520ms ease';
+    state.sheet.style.transition = 'transform 1050ms cubic-bezier(.18,.67,.2,1), filter 1050ms ease, box-shadow 1050ms ease';
     if (commit) {
-      state.sheet.style.transform = `perspective(1800px) rotateY(${state.direction > 0 ? -180 : 180}deg)`;
-      state.sheet.style.filter = 'brightness(.9)';
-      window.setTimeout(() => state.sheet.remove(), 560);
+      state.sheet.style.transform = `perspective(2200px) rotateY(${state.direction > 0 ? -180 : 180}deg)`;
+      state.sheet.style.filter = 'brightness(.91)';
+      window.setTimeout(() => { if (state.sheet.isConnected) state.sheet.remove(); }, 1100);
     } else {
-      state.sheet.style.transform = 'perspective(1800px) rotateY(0deg)';
+      state.sheet.style.transform = 'perspective(2200px) rotateY(0deg)';
       state.sheet.style.filter = 'brightness(1)';
       window.setTimeout(() => {
         if (state.sheet.isConnected) state.sheet.remove();
         if (state.targetStarted && pdfDoc) { animateTurn = false; renderPage(state.startPage); }
-      }, 540);
+      }, 1100);
     }
   }
-  readerStage.addEventListener('touchend', finishFingerTurn, {passive:true});
-  readerStage.addEventListener('touchcancel', finishFingerTurn, {passive:true});
+  readerStage.addEventListener('pointerup', finishFingerTurn);
+  readerStage.addEventListener('pointercancel', finishFingerTurn);
+  readerStage.addEventListener('lostpointercapture', finishFingerTurn);
 
   document.addEventListener('keydown', event => {
     if (!reader.classList.contains('open')) return;
