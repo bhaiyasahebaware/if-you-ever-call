@@ -16,7 +16,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
 <style>
-:root{--paper:#f6efe4;--ink:#292322;--muted:#746763;--red:#9e1f2d;--green:#c8f169;--gold:#9e1f2d;--line:#d8c8bd;--white:#fffaf3;--serif:'Playfair Display',Georgia,serif;--sans:'DM Sans',Arial,sans-serif}
+ :root{--paper:#f6efe4;--ink:#292322;--muted:#746763;--red:#9e1f2d;--green:#c8f169;--gold:#9e1f2d;--line:#d8c8bd;--white:#fffaf3;--serif:'Playfair Display',Georgia,serif;--sans:'DM Sans',Arial,sans-serif}
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background-color:#f6efe4;background-image:radial-gradient(ellipse at 12% 8%,#9e1f2d0b 0,transparent 36%),radial-gradient(ellipse at 88% 42%,#9e1f2d08 0,transparent 38%),radial-gradient(ellipse at 50% 100%,#b8896b0b 0,transparent 48%),linear-gradient(135deg,#fbf6ed 0%,#f3e9dc 48%,#f8f1e7 100%);color:var(--ink);font-family:var(--sans);line-height:1.65}body:before{content:'';position:fixed;inset:0;pointer-events:none;opacity:.12;z-index:0;background-image:radial-gradient(#8c6c5d35 .55px,transparent .75px),radial-gradient(#ffffff75 .55px,transparent .8px),repeating-linear-gradient(0deg,transparent 0,transparent 5px,#a77b6810 6px);background-size:7px 7px,9px 9px,100% 7px;background-position:0 0,3px 4px,0 0;mix-blend-mode:multiply}body:before{pointer-events:none}body>*:not(.reader){position:relative;z-index:1}::selection{background:var(--red);color:#fff}a{color:inherit}.wrap{width:min(1160px,calc(100% - 44px));margin:auto}
 .topbar{min-height:82px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);position:relative}.topbar:after{content:'';position:absolute;bottom:-2px;left:0;width:74px;height:3px;background:var(--red)}.wordmark{font:600 17px var(--serif);letter-spacing:.11em;text-decoration:none}.wordmark span{color:var(--red)}.order{display:inline-flex;align-items:center;background:linear-gradient(120deg,#ff6b73,#f5a65b);color:#21131d;text-decoration:none;padding:13px 23px;font-size:11px;font-weight:800;letter-spacing:.1em;border-radius:3px;box-shadow:0 5px 0 #8f4055;transition:transform .2s,box-shadow .2s}.order:hover{transform:translateY(-2px);box-shadow:0 7px 0 #8f4055}
 .hero{display:grid;grid-template-columns:1fr .85fr;gap:clamp(36px,7vw,100px);align-items:center;padding:76px 0 88px;min-height:620px;position:relative}.hero:after{content:'IF YOU EVER CALL';position:absolute;right:0;bottom:22px;font:italic 12px var(--serif);letter-spacing:.28em;color:#9e1f2d;opacity:.55}.eyebrow{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);font-weight:700}.hero h1{font:600 clamp(44px,6.2vw,78px)/1.04 var(--serif);letter-spacing:-.04em;margin:20px 0 22px;max-width:620px}.hero h1 em{font-weight:500;color:var(--red)}.hero-copy{max-width:490px;color:#665954;font-size:16px}.byline{margin:27px 0 0;font-size:12px;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:#5e514d}.explore-link{display:inline-flex;margin-top:20px;gap:12px;align-items:center;text-decoration:none;border-bottom:1px solid var(--red);padding:8px 0;font-size:12px;letter-spacing:.12em;text-transform:uppercase;font-weight:700}.explore-link span{color:var(--red)}
@@ -42,82 +42,21 @@
 .section{padding:88px 0 94px;border-top:1px solid #67474a;position:relative;background:#352528;color:#fff7ef;box-shadow:0 0 0 100vmax #352528;clip-path:inset(0 -100vmax)}.section:before{content:'◆';display:block;color:#e7a7a0;font-size:10px;position:absolute;top:-7px;left:0;background:#352528;padding:0 9px 0 0}.section .eyebrow{color:#e8b5a9}.section-head{display:flex;align-items:flex-end;justify-content:space-between;gap:30px;margin-bottom:40px}.section h2{font:600 clamp(34px,4vw,52px)/1.12 var(--serif);letter-spacing:-.03em;margin:12px 0 0;color:#fff7ef}.section-number{font:italic 14px var(--serif);color:#e8b5a9}.explore-grid{display:grid;grid-template-columns:.7fr 1.3fr;gap:8vw;align-items:start}.pullquote{font:500 clamp(25px,3vw,37px)/1.32 var(--serif);color:#f0b3a8;margin:0;padding-left:22px;border-left:2px solid #c87875}.description{font-size:16px;color:#f0e2da;max-width:720px}.description p{margin:0 0 18px}.description p:last-child{font:500 19px/1.5 var(--serif);color:#fff7ef;margin-top:25px}.description .story-kicker{font-size:12px;line-height:1.6;letter-spacing:.08em;font-weight:700;color:#fff7ef}
 .about{background:linear-gradient(125deg,#e8e9dc 0%,#f4eee3 100%);color:#292322;padding:84px 0;position:relative;overflow:hidden;border-top:1px solid #d2d2c2;border-bottom:1px solid #d2d2c2}.about:after{content:'IF YOU EVER CALL';position:absolute;right:-35px;bottom:-38px;font:700 clamp(42px,8vw,120px)/1 var(--serif);letter-spacing:.06em;color:#5c6b4b0d;white-space:nowrap;pointer-events:none}.about .eyebrow{color:#7c3c42}.about-grid{display:grid;grid-template-columns:.7fr 1.3fr;gap:8vw;position:relative;z-index:1}.about h2{font:600 clamp(35px,4vw,52px)/1.1 var(--serif);margin:12px 0;color:#342528}.about p{color:#514944;max-width:700px;font-size:17px;line-height:1.85;margin:0 0 17px}
 .contact{padding:66px 0 58px;background:#e8c4b8;box-shadow:0 0 0 100vmax #e8c4b8;clip-path:inset(0 -100vmax);color:#342528}.contact .eyebrow{color:#783640}.contact-row{display:flex;justify-content:space-between;gap:32px;align-items:center;flex-wrap:wrap}.contact h2{font:600 clamp(32px,3.5vw,42px)/1.15 var(--serif);margin:0 0 10px;color:#342528}.contact-links{display:flex;gap:18px;flex-wrap:wrap}.contact-links a{text-decoration:none;border:1px solid #a76b6a;border-radius:4px;padding:11px 15px;font-weight:700;color:#342528;transition:background .2s,color .2s,transform .2s}.contact-links a:hover{background:#352528;color:#fff7ef;transform:translateY(-2px)}footer{border-top:1px solid #5c4143;padding:22px 0 30px;color:#e7d7cf;background:#352528;box-shadow:0 0 0 100vmax #352528;clip-path:inset(0 -100vmax);font-size:11px;letter-spacing:.06em;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
-
-/* In-page PDF reader */
-.reader{position:fixed;inset:0;z-index:20;background:#f6efe4;color:#292322;display:none;flex-direction:column}
-.reader.open{display:flex}
-.reader-top,.reader-bottom{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 18px;background:#eee0d1;border-bottom:1px solid #d8c8bd}
-.reader-title{font:500 15px var(--serif)}
-.reader button{background:transparent;color:inherit;border:1px solid #bda69a;border-radius:3px;padding:9px 12px;cursor:pointer;font:500 12px var(--sans)}
-.reader button:hover{background:#9e1f2d12;border-color:var(--red)}
-.reader-tools{display:flex;gap:8px;align-items:center}
-.reader-stage{flex:1;min-height:0;display:flex;align-items:center;justify-content:center;padding:18px;overflow:hidden;perspective:1800px}
-.page-shell{height:100%;width:min(100%,800px);max-width:100%;display:flex;align-items:center;justify-content:center;position:relative;perspective:1800px}
-.page-shell canvas{max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain;box-shadow:0 10px 40px #0008;background:#fff;backface-visibility:hidden}
+/* In-page PDF reader */.reader{position:fixed;inset:0;z-index:20;background:#f6efe4;color:#292322;display:none;flex-direction:column}.reader.open{display:flex}.reader-top,.reader-bottom{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 18px;background:#eee0d1;border-bottom:1px solid #d8c8bd}.reader-title{font:500 15px var(--serif)}.reader button{background:transparent;color:inherit;border:1px solid #bda69a;border-radius:3px;padding:9px 12px;cursor:pointer;font:500 12px var(--sans)}.reader button:hover{background:#9e1f2d12;border-color:var(--red)}.reader-tools{display:flex;gap:8px;align-items:center}.reader-stage{flex:1;min-height:0;display:flex;align-items:center;justify-content:center;padding:18px;overflow:hidden;perspective:1800px}.page-shell{height:100%;width:min(100%,800px);max-width:100%;display:flex;align-items:center;justify-content:center;position:relative;perspective:1800px}.page-shell canvas{max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain;box-shadow:0 10px 40px #0008;background:#fff;backface-visibility:hidden}
 .page-shell{isolation:isolate}
 .page-shell .page-turn-sheet{position:absolute;z-index:3;max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain;pointer-events:none;transform-style:preserve-3d;backface-visibility:hidden;will-change:transform,filter;box-shadow:0 10px 35px #0005}
 .page-shell .page-turn-sheet.turn-next{transform-origin:left center;animation:premiumTurnNext .72s cubic-bezier(.22,.72,.15,1) forwards}
 .page-shell .page-turn-sheet.turn-prev{transform-origin:right center;animation:premiumTurnPrev .72s cubic-bezier(.22,.72,.15,1) forwards}
-@keyframes premiumTurnNext{
-0%{transform:perspective(1800px) rotateY(0deg);filter:brightness(1);clip-path:inset(0)}
-18%{filter:brightness(.94);box-shadow:8px 4px 20px #0003}
-48%{filter:brightness(.78);box-shadow:18px 8px 30px #0005}
-70%{filter:brightness(.88)}
-100%{transform:perspective(1800px) rotateY(-180deg);filter:brightness(.92);box-shadow:0 5px 18px #0002;clip-path:inset(0)}
-}
-@keyframes premiumTurnPrev{
-0%{transform:perspective(1800px) rotateY(0deg);filter:brightness(1)}
-18%{filter:brightness(.94);box-shadow:-8px 4px 20px #0003}
-48%{filter:brightness(.78);box-shadow:-18px 8px 30px #0005}
-70%{filter:brightness(.88)}
-100%{transform:perspective(1800px) rotateY(180deg);filter:brightness(.92);box-shadow:0 5px 18px #0002}
-}
+@keyframes premiumTurnNext{0%{transform:perspective(1800px) rotateY(0deg);filter:brightness(1);clip-path:inset(0)}18%{filter:brightness(.94);box-shadow:8px 4px 20px #0003}48%{filter:brightness(.78);box-shadow:18px 8px 30px #0005}70%{filter:brightness(.88)}100%{transform:perspective(1800px) rotateY(-180deg);filter:brightness(.92);box-shadow:0 5px 18px #0002;clip-path:inset(0)}}
+@keyframes premiumTurnPrev{0%{transform:perspective(1800px) rotateY(0deg);filter:brightness(1)}18%{filter:brightness(.94);box-shadow:-8px 4px 20px #0003}48%{filter:brightness(.78);box-shadow:-18px 8px 30px #0005}70%{filter:brightness(.88)}100%{transform:perspective(1800px) rotateY(180deg);filter:brightness(.92);box-shadow:0 5px 18px #0002}}
 .reader-stage{touch-action:pan-y}
-@media(prefers-reduced-motion:reduce){.page-shell .page-turn-sheet{animation-duration:.01ms!important}}
-.reader-bottom{justify-content:center;flex-wrap:wrap}
-.reader-bottom .status{min-width:100px;text-align:center;font-size:12px;color:#766964}
-.reader-bottom input{width:min(30vw,240px);accent-color:var(--red)}
-.reader-note{font-size:11px;color:#766964;text-align:center;padding:0 12px 12px}
-.close-reader{font-size:20px!important;line-height:1}
-
-@media(max-width:760px){
-.wrap{width:min(100% - 30px,560px)}
-.topbar{min-height:70px}
-.wordmark{font-size:13px}
-.order{padding:12px 16px;font-size:10.5px}
-.hero{grid-template-columns:1fr;gap:42px;padding:55px 0 68px;min-height:0}
-.hero h1{font-size:clamp(44px,12vw,66px)}
-.hero-copy{font-size:15px}
-.cover-area{width:min(100%,330px)}
-.section{padding:62px 0 68px}
-.section-head{align-items:flex-start;gap:16px;flex-direction:column;margin-bottom:30px}
-.explore-grid,.about-grid{grid-template-columns:1fr;gap:26px}
-.pullquote{max-width:430px}
-.description{font-size:15px}
-.description p:last-child{font-size:18px}
-.about{padding:62px 0}
-.about p{font-size:16px}
-.contact{padding:52px 0 48px}
-.contact-links{gap:12px}
-.contact-links a{font-size:14px}
-.reader-top{padding:10px}
-.reader-title{font-size:12px}
-.reader button{padding:8px}
-.reader-stage{padding:10px}
-.reader-bottom{gap:7px;padding:10px}
-.reader-bottom .status{min-width:80px}
-.reader-bottom input{width:25vw}
-}
+@media(prefers-reduced-motion:reduce){.page-shell .page-turn-sheet{animation-duration:.01ms!important}}.reader-bottom{justify-content:center;flex-wrap:wrap}.reader-bottom .status{min-width:100px;text-align:center;font-size:12px;color:#766964}.reader-bottom input{width:min(30vw,240px);accent-color:var(--red)}.reader-note{font-size:11px;color:#766964;text-align:center;padding:0 12px 12px}.close-reader{font-size:20px!important;line-height:1}
+@media(max-width:760px){.wrap{width:min(100% - 30px,560px)}.topbar{min-height:70px}.wordmark{font-size:13px}.order{padding:12px 16px;font-size:10.5px}.hero{grid-template-columns:1fr;gap:42px;padding:55px 0 68px;min-height:0}.hero h1{font-size:clamp(44px,12vw,66px)}.hero-copy{font-size:15px}.cover-area{width:min(100%,330px)}.section{padding:62px 0 68px}.section-head{align-items:flex-start;gap:16px;flex-direction:column;margin-bottom:30px}.explore-grid,.about-grid{grid-template-columns:1fr;gap:26px}.pullquote{max-width:430px}.description{font-size:15px}.description p:last-child{font-size:18px}.about{padding:62px 0}.about p{font-size:16px}.contact{padding:52px 0 48px}.contact-links{gap:12px}.contact-links a{font-size:14px}.reader-top{padding:10px}.reader-title{font-size:12px}.reader button{padding:8px}.reader-stage{padding:10px}.reader-bottom{gap:7px;padding:10px}.reader-bottom .status{min-width:80px}.reader-bottom input{width:25vw}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
 </style>
 </head>
 <body>
-
-<header class="wrap topbar">
-<a class="wordmark" href="#top">BHAIYA <span>AWARE</span></a>
-<a class="order" href="https://store.pothi.com/book/bhaiyasaheb-ashok-aware-if-you-ever-call/" id="orderLink" target="_blank" rel="noopener noreferrer" aria-label="Order If You Ever Call on Pothi, opens in a new tab">ORDER NOW</a>
-</header>
-
+<header class="wrap topbar"><a class="wordmark" href="#top">BHAIYA <span>AWARE</span></a><a class="order" href="https://store.pothi.com/book/bhaiyasaheb-ashok-aware-if-you-ever-call/" id="orderLink" target="_blank" rel="noopener noreferrer" aria-label="Order If You Ever Call on Pothi, opens in a new tab">ORDER NOW</a></header>
 <main id="top" class="wrap">
 <section class="hero" aria-labelledby="hero-title">
   <div>
@@ -126,21 +65,17 @@
     <p class="byline">If You Ever Call · A Novel</p>
     <a class="explore-link" href="#explore">Explore the book <span>↓</span></a>
   </div>
-
   <div class="cover-area">
     <div class="cover-frame"><img src="assets/front-cover.jpg" alt="Book cover of If You Ever Call by Bhaiya Aware"></div>
-
     <div class="actions">
       <button class="action-btn read-btn" id="readBtn" type="button">READ NOW</button>
       <button class="action-btn request-btn" id="requestPdf" type="button" aria-expanded="false" aria-controls="pdfRequestForm">REQUEST A PDF</button>
-
       <form id="pdfRequestForm" class="pdf-request-form" action="https://script.google.com/macros/s/AKfycbyeginEcmJsgPxbeNHx2APCZVE8kkHX6hWKClexC9Ve8dVtj5ikU5cxmykiEMsGpVvN/exec" method="post" target="pdfRequestFrame" hidden>
         <label for="pdfRequestEmail">Enter your email address</label>
         <input id="pdfRequestEmail" name="email" type="email" autocomplete="email" placeholder="you@example.com" required>
         <button class="action-btn request-btn" id="submitPdfRequest" type="submit">SEND REQUEST</button>
         <p id="pdfRequestStatus" role="status" aria-live="polite"></p>
       </form>
-
       <div id="pdfRequestSuccess" class="pdf-request-success" role="status" aria-live="polite" aria-hidden="true">
         <div class="pdf-success-icon" aria-hidden="true">
           <svg viewBox="0 0 40 40" focusable="false"><path d="M8 21 L16 29 L32 11"></path></svg>
@@ -148,22 +83,13 @@
         <p class="pdf-success-title">You're all set!</p>
         <p class="pdf-success-copy">Your book link should arrive in your inbox shortly. Check your spam folder too, just in case. Happy reading!</p>
       </div>
-
       <iframe name="pdfRequestFrame" id="pdfRequestFrame" title="PDF request response" hidden></iframe>
     </div>
     <p class="button-note">Read online or request a copy by email.</p>
   </div>
 </section>
-
 <section class="section" id="explore">
-  <div class="section-head">
-    <div>
-      <div class="eyebrow">Between the questions and the truth</div>
-      <h2>Explore the Story</h2>
-    </div>
-    <span class="section-number">01 / THE STORY</span>
-  </div>
-
+  <div class="section-head"><div><div class="eyebrow">Between the questions and the truth</div><h2>Explore the Story</h2></div><span class="section-number">01 / THE STORY</span></div>
   <div class="explore-grid">
     <blockquote class="pullquote">Some secrets refuse to stay hidden.</blockquote>
     <div class="description">
@@ -174,60 +100,29 @@
   </div>
 </section>
 </main>
-
 <section class="about" id="about">
   <div class="wrap about-grid">
-    <div>
-      <div class="eyebrow">The person behind the pages</div>
-      <h2>About the Author</h2>
-    </div>
+    <div><div class="eyebrow">The person behind the pages</div><h2>About the Author</h2></div>
     <div>
       <p>Bhaiya Aware makes his debut as a novelist with <em>If You Ever Call</em>, a story that explores human nature, hidden truths, and the secrets that shape us.</p>
     </div>
   </div>
 </section>
-
 <section class="contact wrap" id="contact">
   <div class="contact-row">
-    <div>
-      <div class="eyebrow">Letters are always welcome</div>
-      <h2>Get in touch.</h2>
-      <p style="color:var(--muted);margin:0">For messages, thoughts, or a conversation about the book.</p>
-    </div>
-    <div class="contact-links">
-      <a href="mailto:bhaiyasahebaware@gmail.com">Email me ↗</a>
-      <a href="https://www.instagram.com/bhaiyaone/" target="_blank" rel="noopener noreferrer">Instagram @bhaiyaone ↗</a>
-    </div>
+    <div><div class="eyebrow">Letters are always welcome</div><h2>Get in touch.</h2><p style="color:var(--muted);margin:0">For messages, thoughts, or a conversation about the book.</p></div>
+    <div class="contact-links"><a href="mailto:bhaiyasahebaware@gmail.com">Email me ↗</a><a href="https://www.instagram.com/bhaiyaone/" target="_blank" rel="noopener noreferrer">Instagram @bhaiyaone ↗</a></div>
   </div>
 </section>
-
-<footer class="wrap">
-  <span>© <span id="year"></span> Bhaiya Aware</span>
-  <span>IF YOU EVER CALL · A NOVEL</span>
-</footer>
+<footer class="wrap"><span>© <span id="year"></span> Bhaiya Aware</span><span>IF YOU EVER CALL · A NOVEL</span></footer>
 
 <div class="reader" id="reader" role="dialog" aria-modal="true" aria-label="Read If You Ever Call">
   <div class="reader-top">
     <span class="reader-title">IF YOU EVER CALL <span style="color:#9e1f2d">·</span> BHAIYA AWARE</span>
-    <div class="reader-tools">
-      <button id="zoomOut" aria-label="Zoom out">−</button>
-      <button id="zoomIn" aria-label="Zoom in">＋</button>
-      <button class="close-reader" id="closeReader" aria-label="Close reader">×</button>
-    </div>
+    <div class="reader-tools"><button id="zoomOut" aria-label="Zoom out">−</button><button id="zoomIn" aria-label="Zoom in">＋</button><button class="close-reader" id="closeReader" aria-label="Close reader">×</button></div>
   </div>
-
-  <div class="reader-stage">
-    <div class="page-shell">
-      <canvas id="pdfCanvas" aria-label="Book page"></canvas>
-    </div>
-  </div>
-
-  <div class="reader-bottom">
-    <button id="prevPage">← Previous</button>
-    <span class="status" id="pageStatus">Loading book…</span>
-    <input id="pageSlider" type="range" min="1" max="1" value="1" aria-label="Choose page">
-    <button id="nextPage">Next →</button>
-  </div>
+  <div class="reader-stage"><div class="page-shell"><canvas id="pdfCanvas" aria-label="Book page"></canvas></div></div>
+  <div class="reader-bottom"><button id="prevPage">← Previous</button><span class="status" id="pageStatus">Loading book…</span><input id="pageSlider" type="range" min="1" max="1" value="1" aria-label="Choose page"><button id="nextPage">Next →</button></div>
   <div class="reader-note">Use the arrows or keyboard to turn pages. Press Esc to close.</div>
 </div>
 
@@ -236,8 +131,7 @@
 (() => {
   const $ = id => document.getElementById(id);
   $('year').textContent = new Date().getFullYear();
-
-  const reader = $('reader'), canvas = $('pdfCanvas'), ctx = canvas.getContext('2d');
+const reader = $('reader'), canvas = $('pdfCanvas'), ctx = canvas.getContext('2d');
   const status = $('pageStatus'), slider = $('pageSlider');
   let pdfDoc = null, pageNum = 1, scale = 1, rendering = false, pendingPage = null, loadingTask = null, flipDirection = 'next', animateTurn = false, touchStartX = null;
 
@@ -250,6 +144,150 @@
       status.textContent = 'Reader library failed to load.';
       return;
     }
-
     try {
-      loadingTask = pdfjsLi
+      loadingTask = pdfjsLib.getDocument('assets/book.pdf');
+      pdfDoc = await loadingTask.promise;
+      slider.max = pdfDoc.numPages;
+      pageNum = 1;
+      await renderPage(pageNum);
+    } catch (error) {
+      console.error(error);
+      status.textContent = 'Could not load the book PDF.';
+    }
+  }
+
+  async function renderPage(num) {
+    if (!pdfDoc) return;
+    if (rendering) { pendingPage = num; return; }
+    rendering = true;
+    let turnSheet = null;
+    try {
+      // Preserve the outgoing page as a separate sheet, then render the incoming page beneath it.
+      if (animateTurn && canvas.width && canvas.height && num !== pageNum) {
+        turnSheet = document.createElement('canvas');
+        turnSheet.className = 'page-turn-sheet turn-' + (flipDirection === 'prev' ? 'prev' : 'next');
+        turnSheet.width = canvas.width;
+        turnSheet.height = canvas.height;
+        turnSheet.style.width = canvas.style.width;
+        turnSheet.style.height = canvas.style.height;
+        turnSheet.getContext('2d').drawImage(canvas, 0, 0);
+      }
+      animateTurn = false;
+      const page = await pdfDoc.getPage(num);
+      const stage = document.querySelector('.reader-stage');
+      const base = page.getViewport({scale: 1});
+      const availableWidth = Math.max(220, stage.clientWidth - 36);
+      const availableHeight = Math.max(260, stage.clientHeight - 24);
+      const fit = Math.min(availableWidth / base.width, availableHeight / base.height);
+      const viewport = page.getViewport({scale: fit * scale});
+      const outputScale = window.devicePixelRatio || 1;
+      canvas.width = Math.floor(viewport.width * outputScale);
+      canvas.height = Math.floor(viewport.height * outputScale);
+      canvas.style.width = Math.floor(viewport.width) + 'px';
+      canvas.style.height = Math.floor(viewport.height) + 'px';
+      ctx.setTransform(outputScale, 0, 0, outputScale, 0, 0);
+      await page.render({canvasContext: ctx, viewport}).promise;
+      if (turnSheet) {
+        const shell = document.querySelector('.page-shell');
+        shell.querySelectorAll('.page-turn-sheet').forEach(node => node.remove());
+        shell.appendChild(turnSheet);
+        turnSheet.addEventListener('animationend', () => turnSheet.remove(), {once:true});
+        // A safety cleanup in case animationend is suppressed by the browser.
+        window.setTimeout(() => { if (turnSheet.isConnected) turnSheet.remove(); }, 900);
+      }
+      pageNum = num;
+      slider.value = String(num);
+      status.textContent = `Page ${num} of ${pdfDoc.numPages}`;
+      $('prevPage').disabled = num <= 1;
+      $('nextPage').disabled = num >= pdfDoc.numPages;
+    } catch (error) {
+      console.error(error);
+      status.textContent = 'Could not render this page.';
+    } finally {
+      rendering = false;
+      if (pendingPage !== null) {
+        const next = pendingPage;
+        pendingPage = null;
+        renderPage(next);
+      }
+    }
+  }
+
+  function changePage(delta) {
+    if (!pdfDoc) return;
+    const next = Math.max(1, Math.min(pdfDoc.numPages, pageNum + delta));
+    if (next !== pageNum) { flipDirection = delta < 0 ? 'prev' : 'next'; animateTurn = true; renderPage(next); }
+  }
+  function openReader() {
+    reader.classList.add('open');
+    document.body.style.overflow = 'hidden';
+    if (!pdfDoc && !loadingTask) loadPdf();
+    else if (pdfDoc) renderPage(pageNum);
+    $('closeReader').focus();
+  }
+  function closeReader() {
+    reader.classList.remove('open');
+    document.body.style.overflow = '';
+    $('readBtn').focus();
+  }
+  const requestPdfButton = $('requestPdf');
+  const pdfRequestForm = $('pdfRequestForm');
+  const pdfRequestStatus = $('pdfRequestStatus');
+  const pdfRequestFrame = $('pdfRequestFrame');
+  const pdfRequestSuccess = $('pdfRequestSuccess');
+  let pdfRequestSubmitted = false;
+
+  requestPdfButton.addEventListener('click', () => {
+    const willOpen = pdfRequestForm.hidden;
+    pdfRequestForm.hidden = !willOpen;
+    requestPdfButton.setAttribute('aria-expanded', String(willOpen));
+    if (willOpen) $('pdfRequestEmail').focus();
+  });
+
+  pdfRequestForm.addEventListener('submit', () => {
+    pdfRequestSubmitted = true;
+
+    // Show the success state immediately while the request continues in the background.
+    pdfRequestForm.style.display = 'none';
+    pdfRequestStatus.textContent = '';
+    pdfRequestSuccess.classList.remove('visible');
+    void pdfRequestSuccess.offsetWidth;
+    pdfRequestSuccess.classList.add('visible');
+    pdfRequestSuccess.setAttribute('aria-hidden', 'false');
+  });
+
+  pdfRequestFrame.addEventListener('load', () => {
+    if (!pdfRequestSubmitted) return;
+    pdfRequestSubmitted = false;
+    pdfRequestForm.reset();
+  });
+
+  const readerStage = document.querySelector('.reader-stage');
+  readerStage.addEventListener('touchstart', event => {
+    if (event.touches.length === 1) touchStartX = event.touches[0].clientX;
+  }, {passive:true});
+  readerStage.addEventListener('touchend', event => {
+    if (touchStartX === null || !event.changedTouches.length) return;
+    const dx = event.changedTouches[0].clientX - touchStartX;
+    touchStartX = null;
+    if (Math.abs(dx) > 55) changePage(dx < 0 ? 1 : -1);
+  }, {passive:true});
+
+  $('readBtn').addEventListener('click', openReader);
+  $('closeReader').addEventListener('click', closeReader);
+  $('prevPage').addEventListener('click', () => changePage(-1));
+  $('nextPage').addEventListener('click', () => changePage(1));
+  slider.addEventListener('input', () => { const target = Number(slider.value); if (target !== pageNum) { flipDirection = target < pageNum ? 'prev' : 'next'; animateTurn = true; renderPage(target); } });
+  $('zoomIn').addEventListener('click', () => { scale = Math.min(2.5, scale + .15); canvas.classList.remove('flip-next','flip-prev'); renderPage(pageNum); });
+  $('zoomOut').addEventListener('click', () => { scale = Math.max(.65, scale - .15); canvas.classList.remove('flip-next','flip-prev'); renderPage(pageNum); });
+  document.addEventListener('keydown', event => {
+    if (!reader.classList.contains('open')) return;
+    if (event.key === 'Escape') closeReader();
+    if (event.key === 'ArrowRight') changePage(1);
+    if (event.key === 'ArrowLeft') changePage(-1);
+  });
+  window.addEventListener('resize', () => { if (reader.classList.contains('open') && pdfDoc) renderPage(pageNum); });
+})();
+</script>
+</body>
+</html>
