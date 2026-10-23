@@ -320,7 +320,7 @@ const reader = $('reader'), canvas = $('pdfCanvas'), ctx = canvas.getContext('2d
       const sx = fold + i * stripW;
       const sw = Math.min(stripW + 1.5, W - sx);
       const mid = (i + 0.5) / strips;
-      const theta = mid * Math.PI;
+      const theta = (1 - mid) * Math.PI;
       const xCenter = fold + radius * Math.sin(theta);
       const derivative = Math.abs(Math.cos(theta));
       const dw = Math.max(0.7, stripW * derivative);
@@ -417,13 +417,13 @@ const reader = $('reader'), canvas = $('pdfCanvas'), ctx = canvas.getContext('2d
     state.settling = true;
     const start = state.progress;
     const end = commit ? 1 : 0;
-    const duration = commit ? 1350 : 1050;
+    const duration = commit ? 560 : 380;
     const began = performance.now();
     function settle(now) {
       if (!state.sheet.isConnected) return;
       const t = Math.min(1, (now - began) / duration);
       // Slow, weighted ease-out. The mesh follows the release rather than rotating as a flat card.
-      const eased = 1 - Math.pow(1 - t, 3.2);
+      const eased = 1 - Math.pow(1 - t, 2.4);
       state.progress = start + (end - start) * eased;
       drawPhysicalCurl(state, state.progress);
       if (t < 1) requestAnimationFrame(settle);
