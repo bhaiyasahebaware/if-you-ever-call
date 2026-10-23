@@ -44,10 +44,10 @@
 .contact{padding:66px 0 58px;background:#e8c4b8;box-shadow:0 0 0 100vmax #e8c4b8;clip-path:inset(0 -100vmax);color:#342528}.contact .eyebrow{color:#783640}.contact-row{display:flex;justify-content:space-between;gap:32px;align-items:center;flex-wrap:wrap}.contact h2{font:600 clamp(32px,3.5vw,42px)/1.15 var(--serif);margin:0 0 10px;color:#342528}.contact-links{display:flex;gap:18px;flex-wrap:wrap}.contact-links a{text-decoration:none;border:1px solid #a76b6a;border-radius:4px;padding:11px 15px;font-weight:700;color:#342528;transition:background .2s,color .2s,transform .2s}.contact-links a:hover{background:#352528;color:#fff7ef;transform:translateY(-2px)}footer{border-top:1px solid #5c4143;padding:22px 0 30px;color:#e7d7cf;background:#352528;box-shadow:0 0 0 100vmax #352528;clip-path:inset(0 -100vmax);font-size:11px;letter-spacing:.06em;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 /* In-page PDF reader */.reader{position:fixed;inset:0;z-index:20;background:#f6efe4;color:#292322;display:none;flex-direction:column}.reader.open{display:flex}.reader-top,.reader-bottom{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 18px;background:#eee0d1;border-bottom:1px solid #d8c8bd}.reader-title{font:500 15px var(--serif)}.reader button{background:transparent;color:inherit;border:1px solid #bda69a;border-radius:3px;padding:9px 12px;cursor:pointer;font:500 12px var(--sans)}.reader button:hover{background:#9e1f2d12;border-color:var(--red)}.reader-tools{display:flex;gap:8px;align-items:center}.reader-stage{flex:1;min-height:0;display:flex;align-items:center;justify-content:center;padding:18px;overflow:hidden;perspective:1800px}.page-shell{height:100%;width:min(100%,800px);max-width:100%;display:flex;align-items:center;justify-content:center;position:relative;perspective:1800px}.page-shell canvas{max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain;box-shadow:0 10px 40px #0008;background:#fff;backface-visibility:hidden}
 .page-shell{isolation:isolate}
-.page-shell .page-turn-sheet{position:absolute;z-index:3;max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain;pointer-events:none;transform-style:preserve-3d;backface-visibility:hidden;will-change:transform,filter;box-shadow:0 10px 35px #0005}
+.page-shell .page-turn-sheet{position:absolute;z-index:3;max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain;pointer-events:none;backface-visibility:hidden;will-change:transform,filter;box-shadow:0 10px 35px #0005}
 .page-shell .page-turn-sheet.turn-next{transform-origin:left center;animation:premiumTurnNext .72s cubic-bezier(.22,.72,.15,1) forwards}
 .page-shell .page-turn-sheet.turn-prev{transform-origin:right center;animation:premiumTurnPrev .72s cubic-bezier(.22,.72,.15,1) forwards}
-@keyframes premiumTurnNext{0%{transform:perspective(1800px) rotateY(0deg);filter:brightness(1);clip-path:inset(0)}18%{filter:brightness(.94);box-shadow:8px 4px 20px #0003}48%{filter:brightness(.78);box-shadow:18px 8px 30px #0005}70%{filter:brightness(.88)}100%{transform:perspective(1800px) rotateY(-180deg);filter:brightness(.92);box-shadow:0 5px 18px #0002;clip-path:inset(0)}}
+@keyframes premiumTurnNext{0%{transform:perspective(1800px) rotateY(0deg);filter:brightness(1)}18%{filter:brightness(.94);box-shadow:8px 4px 20px #0003}48%{filter:brightness(.78);box-shadow:18px 8px 30px #0005}70%{filter:brightness(.88)}100%{transform:perspective(1800px) rotateY(-180deg);filter:brightness(.92);box-shadow:0 5px 18px #0002}}
 @keyframes premiumTurnPrev{0%{transform:perspective(1800px) rotateY(0deg);filter:brightness(1)}18%{filter:brightness(.94);box-shadow:-8px 4px 20px #0003}48%{filter:brightness(.78);box-shadow:-18px 8px 30px #0005}70%{filter:brightness(.88)}100%{transform:perspective(1800px) rotateY(180deg);filter:brightness(.92);box-shadow:0 5px 18px #0002}}
 .reader-stage{touch-action:pan-y}
 @media(prefers-reduced-motion:reduce){.page-shell .page-turn-sheet{animation-duration:.01ms!important}}.reader-bottom{justify-content:center;flex-wrap:wrap}.reader-bottom .status{min-width:100px;text-align:center;font-size:12px;color:#766964}.reader-bottom input{width:min(30vw,240px);accent-color:var(--red)}.reader-note{font-size:11px;color:#766964;text-align:center;padding:0 12px 12px}.close-reader{font-size:20px!important;line-height:1}
@@ -162,10 +162,10 @@ const reader = $('reader'), canvas = $('pdfCanvas'), ctx = canvas.getContext('2d
     rendering = true;
     let turnSheet = null;
     try {
-      // Preserve the outgoing page as a separate sheet, then render the incoming page beneath it.
+      // Snapshot the outgoing page only for deliberate page changes.
       if (animateTurn && canvas.width && canvas.height && num !== pageNum) {
         turnSheet = document.createElement('canvas');
-        turnSheet.className = 'page-turn-sheet turn-' + (flipDirection === 'prev' ? 'prev' : 'next');
+        turnSheet.className = 'page-turn-sheet turn-' + flipDirection;
         turnSheet.width = canvas.width;
         turnSheet.height = canvas.height;
         turnSheet.style.width = canvas.style.width;
@@ -192,7 +192,6 @@ const reader = $('reader'), canvas = $('pdfCanvas'), ctx = canvas.getContext('2d
         shell.querySelectorAll('.page-turn-sheet').forEach(node => node.remove());
         shell.appendChild(turnSheet);
         turnSheet.addEventListener('animationend', () => turnSheet.remove(), {once:true});
-        // A safety cleanup in case animationend is suppressed by the browser.
         window.setTimeout(() => { if (turnSheet.isConnected) turnSheet.remove(); }, 900);
       }
       pageNum = num;
@@ -262,6 +261,13 @@ const reader = $('reader'), canvas = $('pdfCanvas'), ctx = canvas.getContext('2d
     pdfRequestForm.reset();
   });
 
+  $('readBtn').addEventListener('click', openReader);
+  $('closeReader').addEventListener('click', closeReader);
+  $('prevPage').addEventListener('click', () => changePage(-1));
+  $('nextPage').addEventListener('click', () => changePage(1));
+  slider.addEventListener('input', () => { const target = Number(slider.value); if (target !== pageNum) { flipDirection = target < pageNum ? 'prev' : 'next'; animateTurn = true; renderPage(target); } });
+  $('zoomIn').addEventListener('click', () => { scale = Math.min(2.5, scale + .15); canvas.classList.remove('flip-next','flip-prev'); renderPage(pageNum); });
+  $('zoomOut').addEventListener('click', () => { scale = Math.max(.65, scale - .15); canvas.classList.remove('flip-next','flip-prev'); renderPage(pageNum); });
   const readerStage = document.querySelector('.reader-stage');
   readerStage.addEventListener('touchstart', event => {
     if (event.touches.length === 1) touchStartX = event.touches[0].clientX;
@@ -273,13 +279,6 @@ const reader = $('reader'), canvas = $('pdfCanvas'), ctx = canvas.getContext('2d
     if (Math.abs(dx) > 55) changePage(dx < 0 ? 1 : -1);
   }, {passive:true});
 
-  $('readBtn').addEventListener('click', openReader);
-  $('closeReader').addEventListener('click', closeReader);
-  $('prevPage').addEventListener('click', () => changePage(-1));
-  $('nextPage').addEventListener('click', () => changePage(1));
-  slider.addEventListener('input', () => { const target = Number(slider.value); if (target !== pageNum) { flipDirection = target < pageNum ? 'prev' : 'next'; animateTurn = true; renderPage(target); } });
-  $('zoomIn').addEventListener('click', () => { scale = Math.min(2.5, scale + .15); canvas.classList.remove('flip-next','flip-prev'); renderPage(pageNum); });
-  $('zoomOut').addEventListener('click', () => { scale = Math.max(.65, scale - .15); canvas.classList.remove('flip-next','flip-prev'); renderPage(pageNum); });
   document.addEventListener('keydown', event => {
     if (!reader.classList.contains('open')) return;
     if (event.key === 'Escape') closeReader();
