@@ -235,6 +235,7 @@ const reader = $('reader'), canvas = $('pdfCanvas'), ctx = canvas.getContext('2d
     void pdfRequestSuccess.offsetWidth;
     pdfRequestSuccess.classList.add('visible');
     pdfRequestSuccess.setAttribute('aria-hidden', 'false');
+    pdfRequestForm.style.display = 'none';
     $('submitPdfRequest').disabled = false;
     pdfRequestForm.reset();
   });
