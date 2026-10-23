@@ -26,6 +26,19 @@
 .pdf-request-form input{display:block;width:100%;min-height:46px;padding:11px 12px;border:1px solid #bda69a;border-radius:3px;background:#fff;color:var(--ink);font:14px var(--sans);margin-bottom:12px}
 .pdf-request-form .action-btn{width:100%;font-size:11px}
 .pdf-request-form p{margin:10px 0 0;font-size:12px;color:var(--muted);overflow-wrap:anywhere}
+.pdf-request-success{display:none;margin-top:18px;padding:20px 14px 18px;text-align:center;background:#f2fbf4;border:1px solid #b8e3c2;border-radius:8px;animation:successReveal .55s ease both}
+.pdf-request-success.visible{display:block}
+.pdf-success-icon{width:66px;height:66px;margin:0 auto 12px;border-radius:50%;background:#e0f5e5;display:grid;place-items:center;transform:scale(.55);opacity:0}
+.pdf-request-success.visible .pdf-success-icon{animation:tickPop .55s cubic-bezier(.2,.9,.25,1.35) .08s forwards}
+.pdf-success-icon svg{width:36px;height:36px;overflow:visible}
+.pdf-success-icon path{fill:none;stroke:#218746;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:40;stroke-dashoffset:40}
+.pdf-request-success.visible .pdf-success-icon path{animation:drawTick .42s ease .38s forwards}
+.pdf-success-title{margin:0 0 6px;font-size:17px;font-weight:700;color:#216b39}
+.pdf-success-copy{margin:0;font-size:13px;line-height:1.55;color:#456b50}
+@keyframes successReveal{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+@keyframes tickPop{0%{transform:scale(.55);opacity:0}70%{transform:scale(1.12);opacity:1}100%{transform:scale(1);opacity:1}}
+@keyframes drawTick{to{stroke-dashoffset:0}}
+@media(prefers-reduced-motion:reduce){.pdf-request-success,.pdf-request-success.visible .pdf-success-icon,.pdf-request-success.visible .pdf-success-icon path{animation:none}.pdf-success-icon{transform:scale(1);opacity:1}.pdf-success-icon path{stroke-dashoffset:0}}
 .section{padding:88px 0 94px;border-top:1px solid #67474a;position:relative;background:#352528;color:#fff7ef;box-shadow:0 0 0 100vmax #352528;clip-path:inset(0 -100vmax)}.section:before{content:'◆';display:block;color:#e7a7a0;font-size:10px;position:absolute;top:-7px;left:0;background:#352528;padding:0 9px 0 0}.section .eyebrow{color:#e8b5a9}.section-head{display:flex;align-items:flex-end;justify-content:space-between;gap:30px;margin-bottom:40px}.section h2{font:600 clamp(34px,4vw,52px)/1.12 var(--serif);letter-spacing:-.03em;margin:12px 0 0;color:#fff7ef}.section-number{font:italic 14px var(--serif);color:#e8b5a9}.explore-grid{display:grid;grid-template-columns:.7fr 1.3fr;gap:8vw;align-items:start}.pullquote{font:500 clamp(25px,3vw,37px)/1.32 var(--serif);color:#f0b3a8;margin:0;padding-left:22px;border-left:2px solid #c87875}.description{font-size:16px;color:#f0e2da;max-width:720px}.description p{margin:0 0 18px}.description p:last-child{font:500 19px/1.5 var(--serif);color:#fff7ef;margin-top:25px}.description .story-kicker{font-size:12px;line-height:1.6;letter-spacing:.08em;font-weight:700;color:#fff7ef}
 .about{background:linear-gradient(125deg,#e8e9dc 0%,#f4eee3 100%);color:#292322;padding:84px 0;position:relative;overflow:hidden;border-top:1px solid #d2d2c2;border-bottom:1px solid #d2d2c2}.about:after{content:'IF YOU EVER CALL';position:absolute;right:-35px;bottom:-38px;font:700 clamp(42px,8vw,120px)/1 var(--serif);letter-spacing:.06em;color:#5c6b4b0d;white-space:nowrap;pointer-events:none}.about .eyebrow{color:#7c3c42}.about-grid{display:grid;grid-template-columns:.7fr 1.3fr;gap:8vw;position:relative;z-index:1}.about h2{font:600 clamp(35px,4vw,52px)/1.1 var(--serif);margin:12px 0;color:#342528}.about p{color:#514944;max-width:700px;font-size:17px;line-height:1.85;margin:0 0 17px}
 .contact{padding:66px 0 58px;background:#e8c4b8;box-shadow:0 0 0 100vmax #e8c4b8;clip-path:inset(0 -100vmax);color:#342528}.contact .eyebrow{color:#783640}.contact-row{display:flex;justify-content:space-between;gap:32px;align-items:center;flex-wrap:wrap}.contact h2{font:600 clamp(32px,3.5vw,42px)/1.15 var(--serif);margin:0 0 10px;color:#342528}.contact-links{display:flex;gap:18px;flex-wrap:wrap}.contact-links a{text-decoration:none;border:1px solid #a76b6a;border-radius:4px;padding:11px 15px;font-weight:700;color:#342528;transition:background .2s,color .2s,transform .2s}.contact-links a:hover{background:#352528;color:#fff7ef;transform:translateY(-2px)}footer{border-top:1px solid #5c4143;padding:22px 0 30px;color:#e7d7cf;background:#352528;box-shadow:0 0 0 100vmax #352528;clip-path:inset(0 -100vmax);font-size:11px;letter-spacing:.06em;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
@@ -55,6 +68,13 @@
         <button class="action-btn request-btn" id="submitPdfRequest" type="submit">SEND REQUEST</button>
         <p id="pdfRequestStatus" role="status" aria-live="polite"></p>
       </form>
+      <div id="pdfRequestSuccess" class="pdf-request-success" role="status" aria-live="polite" aria-hidden="true">
+        <div class="pdf-success-icon" aria-hidden="true">
+          <svg viewBox="0 0 40 40" focusable="false"><path d="M8 21 L16 29 L32 11"></path></svg>
+        </div>
+        <p class="pdf-success-title">You're all set!</p>
+        <p class="pdf-success-copy">Your book link should arrive in your inbox shortly. Check your spam folder too, just in case. Happy reading!</p>
+      </div>
       <iframe name="pdfRequestFrame" id="pdfRequestFrame" title="PDF request response" hidden></iframe>
     </div>
     <p class="button-note">Read online or request a copy by email.</p>
@@ -189,6 +209,7 @@ const reader = $('reader'), canvas = $('pdfCanvas'), ctx = canvas.getContext('2d
   const pdfRequestForm = $('pdfRequestForm');
   const pdfRequestStatus = $('pdfRequestStatus');
   const pdfRequestFrame = $('pdfRequestFrame');
+  const pdfRequestSuccess = $('pdfRequestSuccess');
   let pdfRequestSubmitted = false;
 
   requestPdfButton.addEventListener('click', () => {
@@ -200,6 +221,8 @@ const reader = $('reader'), canvas = $('pdfCanvas'), ctx = canvas.getContext('2d
 
   pdfRequestForm.addEventListener('submit', () => {
     pdfRequestSubmitted = true;
+    pdfRequestSuccess.classList.remove('visible');
+    pdfRequestSuccess.setAttribute('aria-hidden', 'true');
     pdfRequestStatus.textContent = 'Sending your request…';
     $('submitPdfRequest').disabled = true;
   });
@@ -207,7 +230,11 @@ const reader = $('reader'), canvas = $('pdfCanvas'), ctx = canvas.getContext('2d
   pdfRequestFrame.addEventListener('load', () => {
     if (!pdfRequestSubmitted) return;
     pdfRequestSubmitted = false;
-    pdfRequestStatus.textContent = 'Your request was sent. Please check your inbox, including spam, for the book link.';
+    pdfRequestStatus.textContent = '';
+    pdfRequestSuccess.classList.remove('visible');
+    void pdfRequestSuccess.offsetWidth;
+    pdfRequestSuccess.classList.add('visible');
+    pdfRequestSuccess.setAttribute('aria-hidden', 'false');
     $('submitPdfRequest').disabled = false;
     pdfRequestForm.reset();
   });
